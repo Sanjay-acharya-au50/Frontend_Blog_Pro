@@ -8,7 +8,7 @@ const Post = ({ _id, title, summary, cover, createdAt, author }) => {
       <div className="w-1/2 h-[250px] bg-red-400 overflow-hidden">
         <Link to={`/post/${_id}`}>
           <img
-            src={"http://localhost:8080/" + cover}
+            src={"https://test-blog-app-ddgx.onrender.com/" + cover}
             alt=""
             className="object-cover w-full h-full"
           />
@@ -20,7 +20,7 @@ const Post = ({ _id, title, summary, cover, createdAt, author }) => {
         </Link>
         <p className="info my-2 text-xs flex gap-5">
           <img
-            src={"http://localhost:8080/" + author.avatar}
+            src={"https://test-blog-app-ddgx.onrender.com/" + author.avatar}
             alt=""
             className="w-[2rem] h-[2rem] object-cover"
           />

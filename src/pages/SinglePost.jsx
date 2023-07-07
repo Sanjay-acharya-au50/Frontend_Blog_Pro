@@ -35,13 +35,13 @@ const Post = () => {
     <>
       <div>
         <div>
-          <img src={`http://localhost:8080/${post.cover}`} alt="" />
+          <img src={`https://test-blog-app-ddgx.onrender.com/${post.cover}`} alt="" />
         </div>
         <h2 className="font-bold text-4xl">{post.title}</h2>
 
         <div className="flex items-center gap-2">
           <img
-            src={`http://localhost:8080/${post.author.avatar}`}
+            src={`https://test-blog-app-ddgx.onrender.com/${post.author.avatar}`}
             alt=""
             className="w-10 h-10 rounded-full"
           />
