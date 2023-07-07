@@ -8,7 +8,7 @@ const Navbar = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
 
     useEffect(() => {
-      const getProfile = async (e) => {
+      const getProfile = async () => {
         const res = await axios("/profile")
         console.log(res)
         if (res.status === 224) {
@@ -22,16 +22,14 @@ const Navbar = () => {
       getProfile()
     }, [])
 
-  const handleLogout = async (e) => {
-    e.preventDefault();
-
+  const handleLogout = async () => {
     const res = await axios.post("/logout");
 
     if (res.status === 224) {
       toast.success("User Logged Out successfully");
       setUserInfo(null);
     } else {
-      toast.errro(res.data);
+      toast.error(res.data);
     }
   };
 
